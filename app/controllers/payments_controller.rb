@@ -5,7 +5,7 @@ class PaymentsController < ApplicationController
     Payjp.api_key = 'sk_test_c62fade9d045b54cd76d7036'
     token = Payjp::Token.create(
       :card => {
-        :number => params[:number],
+        :number => params[:number].tr(' ', '').tr('-', ''),
         :cvc => params[:cvc],
         :exp_month => params[:exp_month],
         :exp_year => params[:exp_year]

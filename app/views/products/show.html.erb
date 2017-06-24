@@ -38,12 +38,12 @@
 
   <div class="form-group">
     <%= label_tag :exp_month %>
-    <%= text_field_tag :exp_month, '', class: 'form-control' %>
+    <%= select_tag :exp_month, options_for_select(1..12), class: 'form-control' %>
   </div>
 
   <div class="form-group">
     <%= label_tag :exp_year %>
-    <%= text_field_tag :exp_year, '', class: 'form-control' %>
+    <%= select_tag :exp_year, options_for_select(2017..2030), class: 'form-control' %>
   </div>
 
   <div class="text-right">
